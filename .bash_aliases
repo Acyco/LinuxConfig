@@ -14,8 +14,9 @@ alias cdd='cd ..'
 alias cd..='cd ..'
 alias ...='cd ../..'
 alias -- -='cd -'
-
 alias home='cd ~'
+
+alias agi='apt-get -y install'
 
 
 ############################
