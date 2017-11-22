@@ -1,4 +1,4 @@
-#LinuxConfig
+# LinuxConfig
 
 专用Linux配置文件
 
