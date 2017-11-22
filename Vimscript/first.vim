@@ -80,11 +80,17 @@ function! transdict.translate(line) dict
 endfunction
 
 let uk2nl = copy(transdict)
-let uk2nl.words = {'one':'een','two':'twee','three';'drie'}
+let uk2nl.words = {'one':'een','two':'twee','three':'drie'}
 echo uk2nl.translate('three one')
 
+let uk2de = copy(transdict)
+let uk2de.words = {'one':'ein','two':'zwei','three':'drei'}
+echo uk2de.translate('three one')
 
 
+if $LANG =~ 'cn'
+  let trans =uk2de
+endif
 
 
 
