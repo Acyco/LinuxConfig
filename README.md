@@ -5,4 +5,4 @@
 * ln -s ~/LinuxConfig/.bash_aliases ~/.bash_aliases
 * ln -s ~/LinuxConfig/.vimrc ~/.vimrc
 * ln -s ~/LinuxConfig/.vimrc.bundels ~/.vimrc.bundels
-
+*  

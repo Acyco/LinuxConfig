@@ -15,8 +15,15 @@ set nrformats=
 
 
 if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
+source ~/.vimrc.bundles
 endif
 nmap <F5> :NERDTreeToggle<cr>
 nmap <F6> :BundleInstall<cr>
 inoremap jk <Esc>
+"按<F4>使用Firefox预览文件
+	nmap <F4> :call Preview()<CR>
+func! Preview()
+	if &filetype == 'markdown' || $filetype == 'md'
+	exec "!firefox %"
+	endif
+	endfunc
