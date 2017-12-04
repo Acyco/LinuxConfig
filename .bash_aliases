@@ -51,5 +51,23 @@ mcd (){
 	mkdir -pv "$@"
 	cd "$@"
 }
-
-
+# 修改rm  形成回收站
+alias rm=trash
+alias r=trash
+alias rl='ls ~/.trash/'
+trash (){
+    if [ ! -d ~/.trash ]
+    then
+        mkdir ~/.trash/
+        fi
+    mv $@ ~/.trash/
+}
+# 清空回收站
+cleartrash (){
+    read -p "clear trash???" confirm
+    [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -rf ~/.trash/*
+}
+# 恢复文件
+undelfile (){
+    mv -i ~/.trash/$@ ./
+}

@@ -1,9 +1,12 @@
+set shortmess=atI	"不显示xx儿童的提示"
+set cmdheight=1
 set nocompatible
 set nu
-set relativenumber
+set relativenumber	
 syntax on
 syntax enable
 set ru
+
 set showcmd
 set autowrite
 
@@ -11,7 +14,9 @@ set autowrite
 " vim 默认八进制  把所有数字当成十进制
 set nrformats= 
 
-
+"""""""""""""""""""""""
+nmap lh ^
+nmap le $
 
 
 if filereadable(expand("~/.vimrc.bundles"))
