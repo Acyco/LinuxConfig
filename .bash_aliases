@@ -63,6 +63,7 @@ trash (){
     mv $@ ~/.trash/
 }
 # 清空回收站
+alias clt=cleartrash
 cleartrash (){
     read -p "clear trash???" confirm
     [ $confirm == 'y' ] || [ $confirm == 'Y' ] && /bin/rm -rf ~/.trash/*
@@ -70,4 +71,10 @@ cleartrash (){
 # 恢复文件
 undelfile (){
     mv -i ~/.trash/$@ ./
+}
+# 作用：查看pid
+# 用法：pss ps 
+alias pss=psss 
+psss(){
+    ps -ax|grep $1 |grep -v grep|awk '{printf $1"\t"$5"\n"}'
 }
